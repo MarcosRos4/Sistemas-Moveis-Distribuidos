@@ -1,3 +1,5 @@
+# autores: Ivo Bueno, Lucas Matulis, Marcos Rosa, Thomas Ferreira
+
 #url da api "https://qdjlfevwzqslxsmgrthu.supabase.co" 
 #key da api "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InFkamxmZXZ3enFzbHhzbWdydGh1Iiwicm9sZSI6ImFub24iLCJpYXQiOjE2ODAwMzA3MzAsImV4cCI6MTk5NTYwNjczMH0.bC9NnTX1jRB9h6FSOMq73gQVkGzvoaA3YxN4sVFV6wY"
 
@@ -11,6 +13,31 @@ key: str = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI
 supabase: Client = create_client(url, key)
 
 app = Flask(__name__)
+
+
+# formato do json de usuários
+"""
+{
+	"data_criacao": "2023-03-28T20:16:20.246966+00:00",
+	"email": "marcos.vcrosa@senacsp.edu.br",
+	"nome": "marcos",
+	"senha": "cantinhodovale",
+	"telefone": "11923456789",
+	"user_id": "d63ed9b2-90de-4b1a-9380-844560a5da80"
+}
+"""
+# formato do json de vinhos
+"""
+{
+	"data_criacao": "2023-03-28T20:04:21.2195+00:00",
+	"nome": "Jurupinga",
+	"nome_fazenda": "Embu das Artes",
+	"safra": "1967-03-28",
+	"tipo": "Suave",
+	"valor": 73.55,
+	"vinho_id": "3b64c33e-afe7-4daf-b04f-b056592b0206"
+}
+"""
 
 
 #retornar informações da tabela vinho de um vinho específico: nome, safra, tipo, valor
